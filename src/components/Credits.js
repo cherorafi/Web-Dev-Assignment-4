@@ -6,8 +6,9 @@ Note: You need to work on this file for the Assignment.
 ==================================================*/
 import {Link} from 'react-router-dom';
 import React, { useState } from "react";
+import AccountBalance from './AccountBalance';
 
-const Credits = ({credits, addCredit}) => {
+const Credits = ({credits, addCredit, accountBalance}) => {
   const [newDescription, setDescription] = useState("");
   const [newAmount, setAmount] = useState("");
 
@@ -65,6 +66,8 @@ const Credits = ({credits, addCredit}) => {
           <button type="submit">Add Credit</button>
         </form>
       </div>
+      <br/><br/>
+      <AccountBalance accountBalance={accountBalance}/>
       <Link to="/">Return to Home</Link>
     </div>
   );
